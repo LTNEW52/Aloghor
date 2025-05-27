@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+    font-family: "AnekBangla";
+}
+
+body {
+    background-image: url("../public/Image/background1.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: "AnekBangla";
+    src: url(../public/Font/AnekBangla-VariableFont_wdth\,wght.ttf);
+}
+
+@layer utilities {
+    .boxShadowleft {
+        box-shadow: -3px 3px 5px black;
+    }
+
+    .boxShadowright {
+        box-shadow: 3px 3px 5px black;
+    }
+
+    .textShadow {
+        text-shadow: 5px 5px 5px rgb(3, 3, 3);
+    }
+
+    .userSelectNone {
+        user-select: none;
+    }
+}
