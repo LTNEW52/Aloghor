@@ -34,4 +34,21 @@ body {
     .userSelectNone {
         user-select: none;
     }
+
+    .textGolden {
+        color: #ffe7c1;
+    }
+
+    .textGreen {
+        color:#2b391f
+    }
+
+    .backgroundGreen {
+        background-color: #2b391f;
+    }
+
+    .backgroundGolden {
+        background-color: #ffe7c1;
+    }
 }
+
