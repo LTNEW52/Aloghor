@@ -23,7 +23,7 @@ const Navbar = () => {
     return (
         <>
             <div className="w-full flex">
-                <div className="flex flex-row ml-5 textGolden w-fit h-fit textShadow cursor-default userSelectNone italic">
+                <div className="flex flex-row ml-5 textGolden w-fit h-fit textShadow cursor-default italic">
                     <img src="../public/Image/Logo.png" alt="Aloghor Logo" className="2xl:w-40 xl:w-30"/>
                     <div className="p-5 -ml-6">
                         <h1 className="2xl:text-7xl xl:text-5xl font-bold">আলোঘর</h1>
@@ -45,7 +45,7 @@ const Navbar = () => {
                     <button className="2xl:h-8 2xl:w-8 xl:h-6 xl:w-6 absolute right-2 top-1 bg-[#000000] rounded-full border-none cursor-pointer hover:bg-[hsl(0,0%,20%)]"><img src="../public/Image/searchIcon.png" alt="Search Icon" className="w-5 m-auto"/></button>
                 </div>
 
-                <div ref={ref} className="text-backgroundGreen 2xl:w-13 2xl:h-13 xl:w-10 xl:h-10 mt-6 rounded-full backgroundGreen cursor-pointer userSelectNone">
+                <div ref={ref} className="text-backgroundGreen 2xl:w-13 2xl:h-13 xl:w-10 xl:h-10 mt-6 rounded-full backgroundGreen cursor-pointer">
                     <p className="2xl:text-[33px] xl:text-[27px] text-center textGolden hover:bg-[hsl(92,30%,27%)] hover:rounded-full" onClick={() => {
                         setShowInnerDiv(!showInnerDiv)
                     }}>G</p>

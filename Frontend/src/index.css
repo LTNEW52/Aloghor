@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     font-family: "AnekBangla";
+    user-select: none;
 }
 
 body {
@@ -31,10 +32,6 @@ body {
         text-shadow: 5px 5px 5px rgb(3, 3, 3);
     }
 
-    .userSelectNone {
-        user-select: none;
-    }
-
     .textGolden {
         color: #ffe7c1;
     }
@@ -50,5 +47,17 @@ body {
     .backgroundGolden {
         background-color: #ffe7c1;
     }
+
+    .fade {
+        animation: fade 0.8s ease;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }
+}
+
+
+@keyframes fade {
+    0% {transform: rotateY(0deg);}
+    100% {transform: rotateY(360deg);}
 }
 
