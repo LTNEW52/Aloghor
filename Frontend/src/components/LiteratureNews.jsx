@@ -64,15 +64,15 @@ const LiteratureNews = () => {
 
     return (
         <>
-            <h1 className="textGreen text-5xl font-bold italic underline mt-5 text-center animate-bounce">সাহিত্যিক হালচাল</h1>
-            <div className={`my-10 w-[100%] h-[calc(100% - 2rem)] flex ${animate ? "fade" : ""} boxShadowright`} >
+            <h1 className="textGolden text-5xl font-bold italic underline mt-5 text-center animate-bounce textShadow">সাহিত্যিক হালচাল</h1>
+            <div className={`my-10 w-[100%] h-[82%] flex ${animate ? "flip" : ""} boxShadowleft backgroundGolden p-6 rounded-xl`} >
                 <div className="w-[40%] h-inherit">
                     <img src={newsStore[cardsNum].image} alt={newsStore[cardsNum].title} className="h-full w-full" />
                 </div>
 
                 <div className="w-[60%] h-full textGreen ml-auto p-8">
-                    <h1 className="text-5xl my-10 text-center">{newsStore[cardsNum].title}</h1>
-                    <h1 className="text-2xl mb-5">{newsStore[cardsNum].summary}</h1>
+                    <h1 className="text-5xl my-7 text-center">{newsStore[cardsNum].title}</h1>
+                    <h1 className="text-2xl mb-7">{newsStore[cardsNum].summary}</h1>
                     <a href={newsStore[cardsNum].src} target="blank"><p className="text-[23px] text-right hover:underline hover:text-[30px]">বিস্তারিত দেখুন</p></a>
                 </div>
             </div>

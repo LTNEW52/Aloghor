@@ -48,16 +48,25 @@ body {
         background-color: #ffe7c1;
     }
 
+    .flip {
+        animation: flip 0.8s ease;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }
+
     .fade {
         animation: fade 0.8s ease;
-        backface-visibility: hidden;
         transform-style: preserve-3d;
     }
 }
 
-
-@keyframes fade {
+@keyframes flip {
     0% {transform: rotateY(0deg);}
     100% {transform: rotateY(360deg);}
+}
+
+@keyframes fade {
+    50% {opacity: 0%;}
+    100% {opacity: 100%;}
 }
 
