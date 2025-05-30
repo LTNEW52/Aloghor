@@ -1,6 +1,6 @@
 const Discussion = () => {
     return (
-        <h1>আলোচনা করুন</h1>
+        <h1 className="text-red-500">আলোচনা করুন</h1>
     )
 }
 

@@ -56,16 +56,16 @@ const LiteratureNews = () => {
             setTimeout (() => {
                 setAnimate(false)
             } , 800)
-        } , 5000)
+        } , 4000)
         return () => {
             clearInterval(cards)
         }
     } , [])
 
     return (
-        <>
+        <div className="w-[65%] h-[580px] ml-10 my-10">
             <h1 className="textGolden text-5xl font-bold italic underline mt-5 text-center animate-bounce textShadow">সাহিত্যিক হালচাল</h1>
-            <div className={`my-10 w-[100%] h-[82%] flex ${animate ? "flip" : ""} boxShadowleft backgroundGolden p-6 rounded-xl`} >
+            <div className={`my-10 w-[100%] h-[82%] flex ${animate ? "flipSide" : ""} boxShadowright backgroundGolden p-6 rounded-xl`} >
                 <div className="w-[40%] h-inherit">
                     <img src={newsStore[cardsNum].image} alt={newsStore[cardsNum].title} className="h-full w-full" />
                 </div>
@@ -73,10 +73,10 @@ const LiteratureNews = () => {
                 <div className="w-[60%] h-full textGreen ml-auto p-8">
                     <h1 className="text-5xl my-7 text-center">{newsStore[cardsNum].title}</h1>
                     <h1 className="text-2xl mb-7">{newsStore[cardsNum].summary}</h1>
-                    <a href={newsStore[cardsNum].src} target="blank"><p className="text-[23px] text-right hover:underline hover:text-[30px]">বিস্তারিত দেখুন</p></a>
+                    <a href={newsStore[cardsNum].src} target="blank"><p className="text-[23px] text-right hover:underline hover:text-[30px]">&#8594; বিস্তারিত দেখুন</p></a>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

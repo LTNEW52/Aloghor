@@ -41,9 +41,9 @@ const RecentAdded = () => {
         <div className="textGolden w-[65%] h-[580px] mb-15 pt-2 ml-auto mr-10">
             <h1 className="text-center text-5xl font-bold italic mt-5 underline textShadow animate-bounce">নতুন সংযোজন</h1>
             <div className={`my-10 h-[81%] flex flex-row justify-evenly ${animate ? "fade" : ""}`}>
-                <BookCard imgSrc={bookImage[bookAdded]} tailCss="w-fit h-full border textGolden"></BookCard>
-                <BookCard imgSrc={bookImage[bookAdded+1]} tailCss="w-fit h-full border textGolden"></BookCard>
-                <BookCard imgSrc={bookImage[bookAdded+2]} tailCss="w-fit h-full border textGolden"></BookCard>
+                <BookCard imgSrc={bookImage[bookAdded]} tailCss = "w-fit h-full hover:border-5 text-red-500"></BookCard>
+                <BookCard imgSrc={bookImage[bookAdded+1]} tailCss = "w-fit h-full hover:border-5 text-red-500"></BookCard>
+                <BookCard imgSrc={bookImage[bookAdded+2]} tailCss = "w-fit h-full hover:border-5 text-red-500"></BookCard>
             </div>
         </div>
     )
