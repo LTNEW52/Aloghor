@@ -2,7 +2,7 @@ const BookCard = (props) => {
     
     return (
         <div className={props.tailCss}>
-            <img src={props.imgSrc} className="w-fit h-full" />
+            <img src={props.imgSrc} alt="Book Image" className="w-fit h-full" />
         </div>
     )
 }

@@ -49,10 +49,10 @@ const Navbar = () => {
                     <p className="2xl:text-[33px] xl:text-[27px] text-center textGolden hover:bg-[hsl(92,30%,27%)] hover:rounded-full" onClick={() => {
                         setShowInnerDiv(!showInnerDiv)
                     }}>G</p>
-                    <div className={showInnerDiv ? "h-fit textGolden mt-5 p-5 border 2xl:text-2xl xl:text-xl backgroundGreen absolute right-3 rounded-[15px] border-none boxShadowleft" : "hidden"}>
-                        <p className="mb-5 hover:text-[hsl(37,100%,78%)]">Login Or SignUp</p>
-                        <p className="mb-5 hover:text-[hsl(37,100%,78%)]">Settings</p>
-                        <p className="hover:text-[hsl(37,100%,78%)]">Logout</p>
+                    <div className={showInnerDiv ? "h-fit textGolden mt-5 p-10 2xl:text-2xl xl:text-xl backgroundGreen absolute right-3 rounded-[15px] border-none boxShadowleft flex flex-col" : "hidden"}>
+                        <Link to="/User-Authentication" className="mb-8 hover:text-[hsl(37,100%,78%)]">Login Or SignUp</Link>
+                        <Link to="/Discussion" className="mb-8 hover:text-[hsl(37,100%,78%)]">Settings</Link>
+                        <Link to="/" className="hover:text-[hsl(37,100%,78%)]">Logout</Link>
                     </div>
                 </div>
             </div>
@@ -81,3 +81,5 @@ export default Navbar
 // Need huge work on Dropdown, but thats for future.
 
 // Added 2xl for 1920 , xl for 1366 , lg , md , sm are left
+
+// There is a problem in dropDown G, need to fix it.

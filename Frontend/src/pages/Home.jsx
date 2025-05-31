@@ -2,7 +2,6 @@ import BanglaClock from "../components/BanglaClock"
 import LiteratureNews from "../components/LiteratureNews"
 import RecentAdded from "../components/RecentAdded"
 import DiscussionOverview from "../components/DiscussionOverview"
-import Footer from "../components/Footer"
 
 const Home = () => {
 
@@ -20,12 +19,8 @@ const Home = () => {
 
             <DiscussionOverview></DiscussionOverview>
 
-            <div className="w-[100%] relative">
-                <Footer></Footer>
-
-                <div className="w-[50%] h-[730px] ml-auto overflow-hidden">
-                    <img src="../public/image/homePeopleReading.jpg" alt="" className="h-[920px] object-cover rounded-full translate-x-[10%]"/>
-                </div>
+            <div className="w-[50%] h-[730px] ml-auto overflow-hidden relative">
+                <img src="../public/image/homePeopleReading.jpg" alt="" className="h-[920px] object-cover rounded-full translate-x-[10%] absolute"/>
             </div>
         </>
     )
