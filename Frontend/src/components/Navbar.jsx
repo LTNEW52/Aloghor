@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import searchIcon from "../assets/magnifying-glass-solid.svg"
 
 const Navbar = () => {
 
@@ -24,32 +25,32 @@ const Navbar = () => {
         <>
             <div className="w-full flex">
                 <div className="flex flex-row ml-5 textGolden w-fit h-fit textShadow cursor-default italic">
-                    <img src="../public/Image/Logo.png" alt="Aloghor Logo" className="2xl:w-40 xl:w-30"/>
+                    <img src="../public/Image/Logo.png" alt="Aloghor Logo" className="w-40"/>
                     <div className="p-5 -ml-6">
-                        <h1 className="2xl:text-7xl xl:text-5xl font-bold">আলোঘর</h1>
-                        <h3 className="2xl:text-2xl xl:text-[17px] text-right">বই পড়ার, নতুন ঠিকানা</h3>
+                        <h1 className="text-7xl font-bold">আলোঘর</h1>
+                        <h3 className="text-2xl text-right">বই পড়ার, নতুন ঠিকানা</h3>
                     </div>
                 </div>
 
-                <div className="block textGolden w-fit h-fit p-5 2xl:text-4xl xl:text-2xl font-extrabold 2xl:ml-25 xl:ml-10 mt-[15px] textShadow">
+                <div className="block textGolden w-fit h-fit p-5 text-4xl font-extrabold ml-25 mt-[15px] textShadow">
                     <nav>
-                        <Link to="/" className="2xl:mr-10 xl:mr-7 hover:text-[hsl(37,100%,78%)] hover:underline">সূচনা</Link>
-                        <Link to="/Book" className="2xl:mr-10 xl:mr-7 hover:text-[hsl(37,100%,78%)] hover:underline">বই সমগ্র</Link>
-                        <Link to="/Discussion" className="2xl:mr-10 xl:mr-7 hover:text-[hsl(37,100%,78%)] hover:underline">আলোচনার আসর</Link>
-                        <Link to="/Events" className="2xl:mr-10 xl:mr-7 hover:text-[hsl(37,100%,78%)] hover:underline">সাহিত্য আয়োজন</Link>
+                        <Link to="/" className="mr-10  hover:text-[hsl(37,100%,78%)] hover:underline">সূচনা</Link>
+                        <Link to="/Book" className="mr-10 hover:text-[hsl(37,100%,78%)] hover:underline">বই সমগ্র</Link>
+                        <Link to="/Discussion" className="mr-10 hover:text-[hsl(37,100%,78%)] hover:underline">আলোচনার আসর</Link>
+                        <Link to="/Events" className="mr-10  hover:text-[hsl(37,100%,78%)] hover:underline">সাহিত্য আয়োজন</Link>
                     </nav>
                 </div>
 
-                <div className="relative mt-8 2xl:mr-10 xl:mr-7">
-                    <input type="text" placeholder="পছন্দের বই খুজুন" className="bg-white rounded-full 2xl:w-70 xl:w-60 2xl:h-10 xl:h-8 pl-5 2xl:text-[20px] xl:text-[18px] placeholder:text-[#6e6a6a]"/>
-                    <button className="2xl:h-8 2xl:w-8 xl:h-6 xl:w-6 absolute right-2 top-1 bg-[#000000] rounded-full border-none cursor-pointer hover:bg-[hsl(0,0%,20%)]"><img src="../public/Image/searchIcon.png" alt="Search Icon" className="w-5 m-auto"/></button>
+                <div className="relative mt-8 mr-10">
+                    <input type="text" placeholder="পছন্দের বই খুজুন" className="bg-white rounded-full w-70 h-10 pl-5 text-[20px] placeholder:text-[#6e6a6a]"/>
+                    <button className="h-8 w-8 absolute right-2 top-1 bg-black rounded-full border-none cursor- hover:bg-black"><img src={searchIcon} alt="Search Icon" className="w-5 m-auto animate-pulse"/></button>
                 </div>
 
-                <div ref={ref} className="text-backgroundGreen 2xl:w-13 2xl:h-13 xl:w-10 xl:h-10 mt-6 rounded-full backgroundGreen cursor-pointer">
-                    <p className="2xl:text-[33px] xl:text-[27px] text-center textGolden hover:bg-[hsl(92,30%,27%)] hover:rounded-full" onClick={() => {
+                <div ref={ref} className="text-backgroundGreen w-13 h-13 mt-6 rounded-full backgroundGreen cursor-pointer">
+                    <p className="text-[33px] text-center textGolden hover:bg-[hsl(92,30%,27%)] hover:rounded-full" onClick={() => {
                         setShowInnerDiv(!showInnerDiv)
                     }}>G</p>
-                    <div className={showInnerDiv ? "h-fit textGolden mt-5 p-10 2xl:text-2xl xl:text-xl backgroundGreen absolute right-3 rounded-[15px] border-none boxShadowleft flex flex-col" : "hidden"}>
+                    <div className={showInnerDiv ? "h-fit textGolden mt-5 p-10 text-2xl backgroundGreen absolute right-3 rounded-[15px] border-none boxShadowleft flex flex-col" : "hidden"}>
                         <Link to="/User-Authentication" className="mb-8 hover:text-[hsl(37,100%,78%)]">Login Or SignUp</Link>
                         <Link to="/Discussion" className="mb-8 hover:text-[hsl(37,100%,78%)]">Settings</Link>
                         <Link to="/" className="hover:text-[hsl(37,100%,78%)]">Logout</Link>

@@ -64,6 +64,10 @@ body {
         animation: fade 0.8s ease;
         transform-style: preserve-3d;
     }
+
+    .mixedColor {
+        background: linear-gradient(to bottom, #ffe7c1 50% , white 50%);
+    }
 }
 
 @keyframes flipSide {
