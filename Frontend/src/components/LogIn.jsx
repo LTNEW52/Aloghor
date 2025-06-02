@@ -45,7 +45,7 @@ const Login = (props) => {
                         <button className="w-[45%] h-[50px] border-none mt-10 text-[1.3rem] backgroundGreen textGolden rounded-lg font-bold hover:text-2xl cursor-pointer"><img src={GoogleIcon} alt="Google Icon" className="w-[7%] mb-[2%] mr-1 inline" /> গুগল দিয়ে প্রবেশ করুন</button>
                     </div>
 
-                    <h1 className="text-right text-[1.3rem] m-12 font-medium">নতুন অতিথি? <button className="underline hover:text-2xl cursor-pointer" onClick={(props.toggleForm)}>আমাদের সাথে যোগ দিন</button></h1>
+                    <h1 className="text-right text-[1.3rem] m-12 font-medium">নতুন অতিথি? <button className="hover:underline hover:text-2xl cursor-pointer" onClick={(props.toggleForm)}>আমাদের সাথে যোগ দিন</button></h1>
                 </div>
             </div>
         </div>

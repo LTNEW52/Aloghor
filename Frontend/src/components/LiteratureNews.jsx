@@ -63,7 +63,7 @@ const LiteratureNews = () => {
     } , [])
 
     return (
-        <div className="w-[65%] h-[580px] ml-10 my-10">
+        <div className="w-[65%] h-[580px] ml-10 mb-25">
             <h1 className="textGolden text-5xl font-bold italic underline mt-5 text-center animate-bounce textShadow">সাহিত্যিক হালচাল</h1>
             <div className={`my-10 w-[100%] h-[82%] flex ${animate ? "flipSide" : ""} boxShadowright backgroundGolden p-6 rounded-xl`} >
                 <div className="w-[40%] h-inherit">

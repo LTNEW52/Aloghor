@@ -42,8 +42,8 @@ const Navbar = () => {
                 </div>
 
                 <div className="relative mt-8 mr-10">
-                    <input type="text" placeholder="পছন্দের বই খুজুন" className="bg-white rounded-full w-70 h-10 pl-5 text-[20px] placeholder:text-[#6e6a6a]"/>
-                    <button className="h-8 w-8 absolute right-2 top-1 bg-black rounded-full border-none cursor- hover:bg-black"><img src={searchIcon} alt="Search Icon" className="w-5 m-auto animate-pulse"/></button>
+                    <input type="text" placeholder="পছন্দের বই খুজুন" className = "bg-white rounded-full w-70 h-10 pl-5 text-[20px] placeholder:text-[#6e6a6a]"/>
+                    <button className="h-9 w-9 absolute right-0.5 top-0.5 bg-black rounded-full border-none cursor-pointer hover:bg-[hsl(0,0%,20%)]"><img src={searchIcon} alt="Search Icon" className="w-5.5 m-auto animate-pulse"/></button>
                 </div>
 
                 <div ref={ref} className="text-backgroundGreen w-13 h-13 mt-6 rounded-full backgroundGreen cursor-pointer">

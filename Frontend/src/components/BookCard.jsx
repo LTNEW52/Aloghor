@@ -1,7 +1,7 @@
 const BookCard = (props) => {
     
     return (
-        <div className={props.tailCss}>
+        <div className={`${props.tailCss} cursor-pointer`}>
             <img src={props.imgSrc} alt="Book Image" className="w-fit h-full" />
         </div>
     )

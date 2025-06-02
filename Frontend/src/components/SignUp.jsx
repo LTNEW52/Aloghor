@@ -49,7 +49,7 @@ const SignUp = (props) => {
                         <button className="w-[50%] h-[50px] backgroundGreen textGolden text-2xl border-none rounded-lg hover:text-3xl font-medium cursor-pointer">নিবন্ধন করুন</button>
                     </div>
         
-                    <h1 className="text-left text-[1.3rem] -mt-3 ml-12 font-medium">আগেই সদস্য হয়েছেন? <button className="underline hover:text-2xl cursor-pointer" onClick={(props.toggleForm)}>এখনই লগইন করুন</button></h1>
+                    <h1 className="text-left text-[1.3rem] -mt-3 ml-12 font-medium">আগেই সদস্য হয়েছেন? <button className="hover:underline hover:text-2xl cursor-pointer" onClick={(props.toggleForm)}>এখনই লগইন করুন</button></h1>
                 </div>
             </div>
     </div>
