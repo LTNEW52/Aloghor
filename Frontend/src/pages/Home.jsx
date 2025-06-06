@@ -1,7 +1,7 @@
-import BanglaClock from "../components/BanglaClock"
-import LiteratureNews from "../components/LiteratureNews"
-import RecentAdded from "../components/RecentAdded"
-import DiscussionOverview from "../components/DiscussionOverview"
+import BanglaClock from "../components/Home/BanglaClock"
+import LiteratureNews from "../components/Home/LiteratureNews"
+import RecentAdded from "../components/Home/RecentAdded"
+import DiscussionOverview from "../components/Home/DiscussionOverview"
 
 const Home = () => {
 

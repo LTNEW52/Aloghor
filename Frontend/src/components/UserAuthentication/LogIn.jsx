@@ -1,8 +1,8 @@
-import EmailIcon from "../assets/envelope-solid.svg"
-import PasswordIcon from "../assets/lock-solid.svg"
-import EyeOpen from "../assets/eye-solid.svg"
-import EyeClose from "../assets/eye-slash-solid.svg"
-import GoogleIcon from "../assets/google-brands.svg"
+import EmailIcon from "../../assets/envelope-solid.svg"
+import PasswordIcon from "../../assets/lock-solid.svg"
+import EyeOpen from "../../assets/eye-solid.svg"
+import EyeClose from "../../assets/eye-slash-solid.svg"
+import GoogleIcon from "../../assets/google-brands.svg"
 import { useState } from "react"
 
 const Login = (props) => {

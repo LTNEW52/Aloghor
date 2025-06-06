@@ -15,7 +15,7 @@ const Footer = () => {
 
     return (
         <>
-            <div className = {` ${location.pathname == homePage ? "w-[50%] h-[320px]" : "w-[75%] h-[300px]" } " textGreen backgroundGolden z-10 rounded-3xl border-none ml-[7%] -mt-[18%] boxShadowright " `} >
+            <div className = {` ${location.pathname == homePage ? "w-[50%] h-[320px] ml-[7%] -mt-[18%]" : "w-[70%] h-[300px] ml-[10%]" } " textGreen backgroundGolden z-10 rounded-3xl border-none boxShadowright" `} >
                 <div className="h-[90%] flex flex-row justify-evenly">
                     <div className="w-[45%] h-[100%] flex flex-col justify-evenly">
                         <h1 className="text-4xl pl-[23%] underline">যোগাযোগ করুন</h1>

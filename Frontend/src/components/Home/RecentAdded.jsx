@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import BookCard from "./BookCard"
+import BookCard from "../Book/BookCard"
 
 const RecentAdded = () => {
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import Login from "../components/LogIn"
-import SignUp from "../components/SignUp"
+import Login from "../components/UserAuthentication/LogIn"
+import SignUp from "../components/UserAuthentication/SignUp"
 
 const UserAuth = () => {
 

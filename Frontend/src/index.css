@@ -45,7 +45,7 @@ body {
     }
 
     .backgroundGolden {
-        background-color: #ffe7c1;
+        background-color: #ffe8c2;
     }
 
     .flipSide {
@@ -95,4 +95,39 @@ body {
     50% {opacity: 0%;}
     100% {opacity: 100%;}
 }
+
+/* Rc Slider CSS Change */
+
+.rc-slider {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rc-slider-track { /* When It moves */
+  background-color: #2b391f; 
+  height: 10px;
+}
+
+.rc-slider-rail { /* Default */
+  background-color: white;
+  height: 10px;
+  box-shadow: -2px 2px 3px black;
+}
+
+.rc-slider-handle {
+  border: 5px dotted #ffe8c2;
+  background-color: #2b391f;
+  width: 20px;
+  height: 20px ;
+}
+
+.rc-slider-handle:hover {
+  background-color: #ffe8c2;
+  border: 5px dotted #2b391f;
+  height: 30px;
+  width: 30px;
+  margin-top: -10px;
+}
+
 

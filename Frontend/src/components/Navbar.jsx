@@ -46,14 +46,14 @@ const Navbar = () => {
                     <button className="h-9 w-9 absolute right-0.5 top-0.5 bg-black rounded-full border-none cursor-pointer hover:bg-[hsl(0,0%,20%)]"><img src={searchIcon} alt="Search Icon" className="w-5.5 m-auto animate-pulse"/></button>
                 </div>
 
-                <div ref={ref} className="text-backgroundGreen w-13 h-13 mt-6 rounded-full backgroundGreen cursor-pointer">
-                    <p className="text-[33px] text-center textGolden hover:bg-[hsl(92,30%,27%)] hover:rounded-full" onClick={() => {
+                <div ref={ref} className="textGolden w-13 h-13 mt-6 rounded-full backgroundGreen cursor-pointer">
+                    <p className="text-[33px] text-center hover:bg-[hsl(92,30%,27%)] hover:rounded-full" onClick={() => {
                         setShowInnerDiv(!showInnerDiv)
                     }}>G</p>
-                    <div className={showInnerDiv ? "h-fit textGolden mt-5 p-10 text-2xl backgroundGreen absolute right-3 rounded-[15px] border-none boxShadowleft flex flex-col" : "hidden"}>
-                        <Link to="/User-Authentication" className="mb-8 hover:text-[hsl(37,100%,78%)]">Login Or SignUp</Link>
-                        <Link to="/Discussion" className="mb-8 hover:text-[hsl(37,100%,78%)]">Settings</Link>
-                        <Link to="/" className="hover:text-[hsl(37,100%,78%)]">Logout</Link>
+                    <div className={`z-20 h-fit mt-5 p-10 text-2xl backgroundGreen absolute right-3 rounded-[15px] border-none boxShadowleft flex flex-col ${showInnerDiv ? "" : "hidden"}`}>
+                        <Link to="/User-Authentication" className="mb-5 hover:text-[hsl(37,100%,78%)]">Login Or SignUp</Link>
+                        <Link to="" className="mb-5 hover:text-[hsl(37,100%,78%)]">Settings</Link>
+                        <Link to="" className="hover:text-[hsl(37,100%,78%)]">Logout</Link>
                     </div>
                 </div>
             </div>
@@ -83,4 +83,4 @@ export default Navbar
 
 // Added 2xl for 1920 , xl for 1366 , lg , md , sm are left
 
-// There is a problem in dropDown G, need to fix it.
+// There is a problem in dropDown G, need to fix it. UPDATE: The problem was lower Z index. Increasing it put the div on higher, so it is clickable again. I wonder why this problem happened.

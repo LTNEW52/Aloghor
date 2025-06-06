@@ -1,9 +1,9 @@
-import EmailIcon from "../assets/envelope-solid.svg"
-import PasswordIcon from "../assets/lock-solid.svg"
-import NameIcon from "../assets/user-solid.svg"
-import UsernameIcon from "../assets/at-solid.svg"
-import EyeOpen from "../assets/eye-solid.svg"
-import EyeClose from "../assets/eye-slash-solid.svg"
+import EmailIcon from "../../assets/envelope-solid.svg"
+import PasswordIcon from "../../assets/lock-solid.svg"
+import NameIcon from "../../assets/user-solid.svg"
+import UsernameIcon from "../../assets/at-solid.svg"
+import EyeOpen from "../../assets/eye-solid.svg"
+import EyeClose from "../../assets/eye-slash-solid.svg"
 import { useState } from "react"
 
 const SignUp = (props) => {
@@ -37,11 +37,11 @@ const SignUp = (props) => {
                         <label htmlFor="email" className="absolute top-[35.6%] left-35 text-[1.3rem] font-medium mixedColor px-2 bg-white">ইমেইল</label>
                         <img src={EmailIcon} alt="Email Icon" className="absolute w-[3.5%] top-[40%] left-44" />
                         <input type="email" placeholder="এখানে আপনার ইমেইল দিন" className=" w-[70%] h-[50px] bg-white mb-12 border-1 hover:border-3 focus:border-3 rounded-lg text-[1.3rem] pl-23"/>
-                        <label htmlFor="password" className="absolute top-[51.5%] left-35 text-[1.3rem] font-medium px-2 mixedColor bg-white">পাসওয়ার্ড</label>
+                        <label htmlFor="password" className="absolute top-[51.4%] left-35 text-[1.3rem] font-medium px-2 mixedColor bg-white">পাসওয়ার্ড</label>
                         <img src={PasswordIcon} alt="Password Icon" className="absolute w-[3%] top-[55.5%] left-45.5" />
                         <input type={eyeOpen ? "text" : "password"} placeholder="এখানে আপনার পাসওয়ার্ড দিন" className="w-[70%] h-[50px] mb-12 border-1 bg-white hover:border-3 focus:border-3 rounded-lg text-[1.3rem] pl-23" />
                         <button className="w-[4%] absolute top-[56%] right-23 hover:w-[5%] cursor-pointer" onClick={() => setEyeOpen(!eyeOpen)}><img src={eyeOpen ? EyeOpen : EyeClose} alt="Password Hidden" /></button>
-                        <label htmlFor="password" className="absolute top-[67.3%] left-35 text-[1.3rem] font-medium px-2 mixedColor bg-white">পুনরায় পাসওয়ার্ড</label>
+                        <label htmlFor="password" className="absolute top-[67.2%] left-35 text-[1.3rem] font-medium px-2 mixedColor bg-white">পুনরায় পাসওয়ার্ড</label>
                         <img src={PasswordIcon} alt="Password Icon" className="absolute w-[3%] top-[71%] left-45.5" />
                         <input type={confirmEyeOpen ? "text" : "password"} placeholder="আপনার পাসওয়ার্ড নিশ্চিত করুন" className="w-[70%] h-[50px] mb-12 border-1 hover:border-3 focus:border-3 bg-white rounded-lg text-[1.3rem] pl-23" />
                         <button className="w-[4%] absolute top-[72%] right-23 hover:w-[5%] cursor-pointer" onClick={() => setConfirmEyeOpen(!confirmEyeOpen)}><img src={confirmEyeOpen ? EyeOpen : EyeClose} alt="Password Hidden" /></button>
