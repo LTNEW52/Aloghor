@@ -6,6 +6,7 @@ import Events from './pages/Events'
 import UserAuth from './pages/UserAuthentication'
 import MainPage from './mainPage'
 import Authentication from './Authentication'
+import SpecificBook from './components/Book/SpecificBook'
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
                 <Route element={<MainPage/>}>
                     <Route path='/' element={<Home/>}></Route>
                     <Route path='/Book' element={<Book/>}></Route>
+                    <Route path='/Book/:bookId' element={<SpecificBook/>}></Route>
                     <Route path='/Discussion' element={<Discussion/>}></Route>
                     <Route path='/Events' element={<Events/>}></Route>
                 </Route>
@@ -32,3 +34,4 @@ export default App
 
 // Routes: Uses Navbar to change the website url, so /Book to /Discussion, but all with App! so Navbar for App is enough in this case!
 
+// :bookId catches specific book and shows the page, for now, it doesnt have database so any id number will show the same thing. /Book/1234 == /Book/5678
