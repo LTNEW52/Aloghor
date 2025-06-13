@@ -1,7 +1,5 @@
 const Discussion = () => {
-    return (
-        <h1 className="text-red-500">আলোচনা করুন</h1>
-    )
-}
+  return <h1 className="text-red-500">আলোচনা করুন</h1>;
+};
 
-export default Discussion
+export default Discussion;
