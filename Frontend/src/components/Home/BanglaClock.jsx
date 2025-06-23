@@ -106,7 +106,7 @@ const BanglaClock = () => {
         }
       }
     }
-    banglaDate = banglaDate.toString();
+    banglaDate = banglaDate.toString().padStart(2, 0);
     banglaDate = BanglaNum[banglaDate[0]] + BanglaNum[banglaDate[1]];
 
     return [

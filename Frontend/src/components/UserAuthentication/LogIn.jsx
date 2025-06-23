@@ -35,6 +35,8 @@ const Login = (props) => {
             <img src={EmailIcon} alt="Email Icon" className="absolute w-[3.5%] top-[16%] left-44" />
             <input
               type="email"
+              required
+              pattern="\S+@\S+\.\S+"
               placeholder="এখানে আপনার ইমেইল দিন"
               className="bg-white w-[70%] h-[50px] mb-15 border-1 hover:border-3 focus:border-3 rounded-lg text-[1.3rem] pl-23"
             />
@@ -51,6 +53,8 @@ const Login = (props) => {
             />
             <input
               type={eyeOpen ? "text" : "password"}
+              required
+              minLength={6}
               placeholder="এখানে আপনার পাসওয়ার্ড দিন"
               className="w-[70%] h-[50px] bg-white mb-10 border-1 hover:border-3 focus:border-3 rounded-lg text-[1.3rem] pl-23"
             />

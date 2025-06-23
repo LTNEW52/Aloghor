@@ -36,6 +36,9 @@ const SignUp = (props) => {
             <img src={NameIcon} alt="Email Icon" className="absolute w-[3%] top-[8%] left-44" />
             <input
               type="text"
+              minLength={4}
+              maxLength={40}
+              required
               placeholder="এখানে আপনার নাম লিখুন"
               className=" w-[70%] h-[50px] mb-12 bg-white border-1 hover:border-3 focus:border-3 rounded-lg text-[1.3rem] pl-23"
             />
@@ -52,6 +55,9 @@ const SignUp = (props) => {
             />
             <input
               type="text"
+              minLength={4}
+              maxLength={20}
+              required
               placeholder="এখানে আপনার ইউজারনেম দিন"
               className=" w-[70%] h-[50px] bg-white mb-12 border-1 hover:border-3 focus:border-3 rounded-lg text-[1.3rem] pl-23"
             />
@@ -64,6 +70,8 @@ const SignUp = (props) => {
             <img src={EmailIcon} alt="Email Icon" className="absolute w-[3.5%] top-[40%] left-44" />
             <input
               type="email"
+              required
+              pattern="\S+@\S+\.\S+"
               placeholder="এখানে আপনার ইমেইল দিন"
               className=" w-[70%] h-[50px] bg-white mb-12 border-1 hover:border-3 focus:border-3 rounded-lg text-[1.3rem] pl-23"
             />
@@ -80,6 +88,8 @@ const SignUp = (props) => {
             />
             <input
               type={eyeOpen ? "text" : "password"}
+              required
+              minLength={6}
               placeholder="এখানে আপনার পাসওয়ার্ড দিন"
               className="w-[70%] h-[50px] mb-12 border-1 bg-white hover:border-3 focus:border-3 rounded-lg text-[1.3rem] pl-23"
             />
@@ -102,6 +112,8 @@ const SignUp = (props) => {
             />
             <input
               type={confirmEyeOpen ? "text" : "password"}
+              required
+              minLength={6}
               placeholder="আপনার পাসওয়ার্ড নিশ্চিত করুন"
               className="w-[70%] h-[50px] mb-12 border-1 hover:border-3 focus:border-3 bg-white rounded-lg text-[1.3rem] pl-23"
             />
