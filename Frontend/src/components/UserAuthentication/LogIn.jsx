@@ -3,10 +3,25 @@ import PasswordIcon from "../../assets/lock-solid.svg";
 import EyeOpen from "../../assets/eye-solid.svg";
 import EyeClose from "../../assets/eye-slash-solid.svg";
 import GoogleIcon from "../../assets/google-brands.svg";
+import crossIcon from "../../assets/xmark-solid.svg";
+import tickIcon from "../../assets/check-solid.svg";
 import { useState } from "react";
 
 const Login = (props) => {
   const [eyeOpen, setEyeOpen] = useState(false);
+
+  const [email, setEmail] = useState("");
+  const [validEmail, setValidEmail] = useState("");
+  const [showEmailValid, setShowEmailValid] = useState(false);
+  const [emailValid, setEmailValid] = useState(false);
+
+  const [password, setPassword] = useState("");
+  const [validPassword, setValidPassword] = useState("");
+  const [showPassValid, setShowPassValid] = useState(false);
+  const [passValid, setPassValid] = useState(false);
+
+  const [validationError, setValidationError] = useState("");
+  const [showValidationError, setShowValidationError] = useState(false);
 
   return (
     <div className="w-[40%] h-[100%] textGreen rounded py-5">
@@ -38,7 +53,24 @@ const Login = (props) => {
               required
               pattern="\S+@\S+\.\S+"
               placeholder="এখানে আপনার ইমেইল দিন"
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (/\S+@\S+\.\S+/.test(e.target.value)) {
+                  setValidEmail(e.target.value);
+                  setEmailValid(true);
+                } else if (e.target.value != "") {
+                  setEmailValid(false);
+                  setShowEmailValid(true);
+                } else {
+                  setEmailValid(false);
+                  setShowEmailValid(false);
+                }
+              }}
               className="bg-white w-[70%] h-[50px] mb-15 border-1 hover:border-3 focus:border-3 rounded-lg text-[1.3rem] pl-23"
+            />
+            <img
+              src={!emailValid ? crossIcon : tickIcon}
+              className={`absolute w-[3%] top-[15%] right-23 ${showEmailValid ? "" : "hidden"}`}
             />
             <label
               htmlFor="password"
@@ -56,6 +88,19 @@ const Login = (props) => {
               required
               minLength={6}
               placeholder="এখানে আপনার পাসওয়ার্ড দিন"
+              onChange={(e) => {
+                setPassword(e.target.value);
+                if (e.target.value.length >= 8) {
+                  setValidPassword(e.target.value);
+                  setPassValid(true);
+                } else if (e.target.value != "") {
+                  setPassValid(false);
+                  setShowPassValid(true);
+                } else {
+                  setPassValid(false);
+                  setShowPassValid(false);
+                }
+              }}
               className="w-[70%] h-[50px] bg-white mb-10 border-1 hover:border-3 focus:border-3 rounded-lg text-[1.3rem] pl-23"
             />
             <button
@@ -64,8 +109,29 @@ const Login = (props) => {
             >
               <img src={eyeOpen ? EyeOpen : EyeClose} alt="Password Hidden" />
             </button>
+            <img
+              src={!passValid ? crossIcon : tickIcon}
+              className={`absolute w-[3%] top-[48.5%] right-14 ${showPassValid ? "" : "hidden"}`}
+            />
 
-            <button className="w-[50%] h-[50px] backgroundGreen textGolden text-2xl border-none rounded-lg hover:text-3xl font-medium cursor-pointer">
+            <button
+              className="w-[50%] h-[50px] backgroundGreen textGolden text-2xl border-none rounded-lg hover:text-3xl font-medium cursor-pointer"
+              onClick={() => {
+                if (
+                  email != "" &&
+                  password != "" &&
+                  email == validEmail &&
+                  password == validPassword
+                ) {
+                  console.log(validEmail, validPassword);
+                  setValidationError("আপনি সফলভাবে নিবন্ধন সম্পন্ন করেছেন");
+                  setShowValidationError(false);
+                } else {
+                  setValidationError("অনুগ্রহ করে সব ও সঠিক তথ্য দিন");
+                  setShowValidationError(true);
+                }
+              }}
+            >
               সাইন ইন
             </button>
           </div>
@@ -80,7 +146,12 @@ const Login = (props) => {
             </button>
           </div>
 
-          <h1 className="text-right text-[1.3rem] m-12 font-medium">
+          <div
+            className={`${showValidationError ? "text-red-500 " : "text-green-500"} text-center text-[1.3rem] h-[35px] mt-8`}
+          >
+            {validationError}
+          </div>
+          <h1 className="text-right text-[1.3rem] font-medium mt-5 mr-8">
             নতুন অতিথি?{" "}
             <button
               className="hover:underline hover:text-2xl cursor-pointer"
@@ -100,3 +171,5 @@ export default Login;
 // Login page contains standard login form. Also have option for login with google.
 
 // In future should add remember me, when I will start backend.
+
+// validate information for backend connection.
